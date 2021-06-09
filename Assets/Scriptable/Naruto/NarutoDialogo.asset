@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0ad4bbb056e3944b2070f503dcc5c0, type: 3}
+  m_Name: NarutoDialogo
+  m_EditorClassIdentifier: 
+  nome: Naruto
+  talkSound: []
+  falas:
+  - "Ol\xE1, tudo bem? Me disseram para te encontrar."
+  - "Ah, ent\xE3o \xE9 voc\xEA. Estava te esperando"
+  - "Mas por qu\xEA? Quem \xE9 voc\xEA?"
+  - "Eles me disseram que voc\xEA viria."
+  - Eles? Quem?
+  - "A um bom tempo atr\xE1s esse bairro vivia em guerra, pessoas morriam enforcadas
+    na pra\xE7a e eram enterradas por aqui, sem nome e sem identidade. "
+  - "Ap\xF3s uma tentativa de enforcamento por corda dar errado por tr\xEAs vezes
+    consecutivas, os moradores mataram o cidad\xE3o a pauladas. "
+  - "Depois disso alguns manifestantes pediram liberdade e justi\xE7a para acabar
+    com essa opress\xE3o. "
+  - "Alguns dizem que os fantasmas que estavam tentando fazer justi\xE7a quebrando
+    a corda de enforcamento e libertando seu povo ficaram presos nesse plano por
+    n\xE3o"
+  - "terem conseguido ajudar as pessoas que continuaram morrendo nas m\xE3os de abusadores
+    de poder."
+  - "Outros dizem que eles s\xF3 est\xE3o aqui para fazer o mal, s\xE3o muitos rumores. "
+  - Os primeiros a aparecerem por aqui foram um senhor que veste um casaco sobretudo
+    e uma menina de vestido branco
+  - "eles n\xE3o machucam ningu\xE9m, mas as vezes est\xE3o brincando e isso acaba
+    atrapalhando os humanos... "
+  - "Voc\xEA \xE9 um deles?"
+  - "N\xE3o, mas posso v\xEA-los. Assim como voc\xEA, estou certo?"
+  opcao: 1
+  opcoes:
+  - "Claro que n\xE3o! N\xE3o vejo fantasmas... As l\xE2mpadas rolaram por causa
+    do vento. "
+  - "\xC9... n\xE3o os vi, mas imaginei que as l\xE2mpadas n\xE3o estivessem se mexendo
+    sozinhas."
+  proximos:
+  - {fileID: 11400000, guid: 03e9cea6f15a80b458f4cd9afb47376b, type: 2}
+  - {fileID: 11400000, guid: 720b8b77854e9c143953bc10a6a2d38d, type: 2}
+  missaoPraPegar: 
