@@ -8,6 +8,8 @@ public partial class Cutscene : MonoBehaviour
         public bool waitUntilComplete;
         protected RectTransform targetTransform;
         protected RectTransform goalTransform;
+        protected Transform targetTransformPos;
+        protected Transform goalTransformPos;
         protected float duration;
         public abstract IEnumerator PlayCommand();
     }
@@ -30,21 +32,42 @@ public partial class Cutscene : MonoBehaviour
             this.speed = _speed;
             this.waitUntilComplete = _waitUntilComplete;
         }
+        public Move(Transform _target, Transform _goal, float _speed, bool _waitUntilComplete = true){
+            this.targetTransformPos = _target;
+            this.goalTransformPos = _goal;
+            this.speed = _speed;
+            this.waitUntilComplete = _waitUntilComplete;
+        }
         public override IEnumerator PlayCommand()
         {
-            if(targetTransform == null){
+            if(targetTransform == null && targetTransformPos){
                 Debug.Log("Assigna o transform ae chapa");
             }
-            var startTime = Time.time;
-            Vector2 firstPos = targetTransform.position;
-            Vector2 endPos = goalTransform.position;
-            Debug.Log("Começando a se mover, de: " + firstPos + " Até: " + endPos);
-            float lenght = Vector2.Distance(firstPos, endPos);
-            while(Vector2.Distance(targetTransform.position, goalTransform.position) > .25f){
-                float distCovered = (Time.time - startTime) * speed;
-                float fraction = distCovered/lenght;
-                targetTransform.position = Vector2.Lerp(targetTransform.position, goalTransform.position, fraction);
-                yield return null;
+            if(targetTransform != null){
+                var startTime = Time.time;
+                Vector2 firstPos = targetTransform.position;
+                Vector2 endPos = goalTransform.position;
+                Debug.Log("Começando a se mover, de: " + firstPos + " Até: " + endPos);
+                float lenght = Vector2.Distance(firstPos, endPos);
+                while(Vector2.Distance(targetTransform.position, goalTransform.position) > .25f){
+                    float distCovered = (Time.time - startTime) * speed;
+                    float fraction = distCovered/lenght;
+                    targetTransform.position = Vector2.Lerp(targetTransform.position, goalTransform.position, fraction);
+                    yield return null;
+                }
+            }
+             if(targetTransformPos != null){
+                var startTime = Time.time;
+                Vector2 firstPos = targetTransformPos.position;
+                Vector2 endPos = goalTransformPos.position;
+                Debug.Log("Começando a se mover, de: " + firstPos + " Até: " + endPos);
+                float lenght = Vector2.Distance(firstPos, endPos);
+                while(Vector2.Distance(targetTransformPos.position, goalTransformPos.position) > .25f){
+                    float distCovered = (Time.time - startTime) * speed;
+                    float fraction = distCovered/lenght;
+                    targetTransformPos.position = Vector2.Lerp(targetTransformPos.position, goalTransformPos.position, fraction);
+                    yield return null;
+                }
             }
         }
     }
@@ -53,6 +76,9 @@ public partial class Cutscene : MonoBehaviour
             return new Wait(duration, waitUntilComplete);
         }
         public static Move Move(RectTransform target, RectTransform goal, float speed, bool waitUntilComplete = true){
+            return new Move(target, goal, speed, waitUntilComplete);
+        }
+        public static Move Move(Transform target, Transform goal, float speed, bool waitUntilComplete){
             return new Move(target, goal, speed, waitUntilComplete);
         }
     }

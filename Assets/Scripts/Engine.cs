@@ -28,16 +28,18 @@ public class Engine : MonoBehaviour
     float tiltTimer;
     bool night;
     public Dictionary<string, Dictionary<string, Mission>> missionsContainer = new Dictionary<string, Dictionary<string, Mission>>();
+    Missions holder;
     private void Start() {
         GetLights();
         var d = Instantiate(dialogo);
         d.GetComponent<Dialogo>().Initialize("Chefe", "", null, _dialogo);
-        missionsContainer.Add("primeiroSet", Missions.primeiroSet);
-        missionsContainer.Add("segundoSet", Missions.segundoSet);
-        missionsContainer.Add("terceiroSet", Missions.terceiroSet);
-        missionsContainer.Add("quartoSet", Missions.quartoSet);
-        missionsContainer.Add("quintoSet", Missions.quintoSet);
-        missionsContainer.Add("sextoSet", Missions.sextoSet);
+        holder = new Missions();
+        missionsContainer.Add("primeiroSet", holder.primeiroSet);
+        missionsContainer.Add("segundoSet", holder.segundoSet);
+        missionsContainer.Add("terceiroSet", holder.terceiroSet);
+        missionsContainer.Add("quartoSet", holder.quartoSet);
+        missionsContainer.Add("quintoSet", holder.quintoSet);
+        missionsContainer.Add("sextoSet", holder.sextoSet);
     }
 
     void GetLights(){

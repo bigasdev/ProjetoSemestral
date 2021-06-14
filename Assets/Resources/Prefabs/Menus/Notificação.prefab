@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notificationName: {fileID: 8723106184150863071}
   fundo: {fileID: 7304604712968480566}
+  notificationSound: {fileID: 8300000, guid: afed81bd959b77b48a3d7b1c4abdbf63, type: 3}
 --- !u!1 &7603370654418807588
 GameObject:
   m_ObjectHideFlags: 0

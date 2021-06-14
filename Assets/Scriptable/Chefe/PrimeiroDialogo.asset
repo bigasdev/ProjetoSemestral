@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: PrimeiroDialogo
   m_EditorClassIdentifier: 
   nome: 
-  talkSound:
-  - {fileID: 8300000, guid: d559861a32ade954eae249d73147f9d3, type: 3}
-  - {fileID: 8300000, guid: 32328a08aa9f2944ba2aded6d8ea8ee4, type: 3}
-  - {fileID: 8300000, guid: 6aeaaa3fc94918844ba8a34e7c56f1d5, type: 3}
+  talkSound: []
   falas:
   - "Bem-vindo ao seu primeiro dia de trabalho na Fantasy!  Suas tarefas aparecer\xE3o
     na barra de tarefas ao lado, "

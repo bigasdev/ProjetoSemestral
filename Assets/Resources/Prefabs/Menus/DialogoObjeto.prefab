@@ -117,6 +117,7 @@ MonoBehaviour:
   npcDialogo: {fileID: 1595998028309238281}
   skipButton: {fileID: 1957234396903361659}
   opcaoMenu: {fileID: 9216317077968161701, guid: a685800eae209234985f9b421b39db02, type: 3}
+  typingSound: {fileID: 8300000, guid: eb28b0d5bedf5b14cb4d99c1f507b368, type: 3}
   dialogos: []
 --- !u!1001 &7292972982750314970
 PrefabInstance:

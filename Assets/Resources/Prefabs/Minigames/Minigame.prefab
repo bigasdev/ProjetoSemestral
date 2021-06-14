@@ -75,6 +75,7 @@ MonoBehaviour:
   dialogo: {fileID: 0}
   minigame: {fileID: 1717226863118754115, guid: a190a54948f2f9143acf8f823ef9c619, type: 3}
   som: {fileID: 0}
+  completo: 0
 --- !u!1 &2244998588685994125
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2244998588685994125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.87, y: -0.82, z: 0}
+  m_LocalPosition: {x: 3.68, y: 0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2244998588549066965}
@@ -146,7 +147,7 @@ SpriteRenderer:
   m_SortingLayerID: 794383329
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e5d78239680e7514080b6fa19d5e098e, type: 3}
+  m_Sprite: {fileID: 4681755704322451444, guid: 5e75ed92512762747bff04448d8d5f84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

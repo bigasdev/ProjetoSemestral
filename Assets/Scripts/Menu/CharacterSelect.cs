@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class CharacterSelect : MonoBehaviour
 {
     [SerializeField] Image cabelo, roupa, sapato;
     [SerializeField] Sprite[] cabelos, roupas, sapatos;
     [SerializeField] int cabeloIndex = 0, roupaIndex = 0, sapatoIndex = 0;
-
+    public AudioClip menuClick;
     void Refresh(){
         cabelo.sprite = cabelos[cabeloIndex];
         roupa.sprite = roupas[roupaIndex];
@@ -16,6 +16,7 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void Direita(string value){
+        SoundManager.Instance.PlaySfx(menuClick);
         if(value == "Cabelo" && cabeloIndex < cabelos.Length - 1) cabeloIndex++;
         else if (value == "Cabelo" && cabeloIndex == cabelos.Length - 1) cabeloIndex = 0;
         if(value == "Roupa" && roupaIndex <  roupas.Length - 1) roupaIndex++;
@@ -26,6 +27,7 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void Esquerda(string value){
+        SoundManager.Instance.PlaySfx(menuClick);
         if(value == "Cabelo" && cabeloIndex > 0) cabeloIndex--;
         else if(value == "Cabelo" && cabeloIndex == 0) cabeloIndex = cabelos.Length - 1;
         if(value == "Roupa" && roupaIndex > 0) roupaIndex--;
@@ -36,9 +38,17 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void Random(){
+        SoundManager.Instance.PlaySfx(menuClick);
         cabeloIndex = UnityEngine.Random.Range(0, cabelos.Length);
         roupaIndex = UnityEngine.Random.Range(0, roupas.Length);
         sapatoIndex = UnityEngine.Random.Range(0, sapatos.Length);
         Refresh();
+    }
+    public void Aceitar(){
+        SoundManager.Instance.PlaySfx(menuClick);
+        Conta.Instance.CallSaveData(cabeloIndex, roupaIndex, sapatoIndex);
+        PersonagemManager.Instance.CriarPersonagem(cabeloIndex, roupaIndex, sapatoIndex);
+        Conta.Instance.criouPersonagem = true;
+        SceneManager.LoadScene(1);
     }
 }

@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class PersonagemManager : MonoBehaviour
 {
+    private static PersonagemManager instance;
+    public static PersonagemManager Instance{
+        get{
+            if(instance == null){
+                instance = FindObjectOfType<PersonagemManager>();
+            }
+            return instance;
+        }
+    }
     public Personagem suaPersonagem;
+    public void CriarPersonagem(int cabelo, int roupa, int sapato){
+        suaPersonagem = new Personagem("Lisa", cabelo, roupa, sapato);
+    }
 
 }
 

@@ -19,12 +19,18 @@ public class Gamehud : MonoBehaviour
     }
     public void InitializeTab(List<Mission> missions){
         isShowing = !isShowing;
+        for(int i = 0; i < tasks.Length; i++){
+            tasks[i].text = "";
+        }
         if(missions == null) return;
         for(int i = 0; i < missions.Count; i++){
             tasks[i].text = missions[i].description +" "+$"{missions[i].objetivo.quantity}" + "/" + $"{missions[i].objetivo.maxQuantity}";
         }
     }
     public void RefreshTab(List<Mission> missions){
+        for(int i = 0; i < tasks.Length; i++){
+            tasks[i].text = "";
+        }
         isShowing = true;
         if(missions == null) return;
         for(int i = 0; i < missions.Count; i++){

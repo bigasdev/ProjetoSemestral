@@ -5,12 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Missions
 {
-    public static Dictionary<string, Mission> primeiroSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> primeiroSet = new Dictionary<string, Mission>(){
         {"Encontrarchefe", 
         new Mission("Encontre a chefe", "Vá encontrar a chefe na praça de alimentação", 
         new EncontrarChefe(1))}
     };
-    public static Dictionary<string, Mission> segundoSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> segundoSet = new Dictionary<string, Mission>(){
         {"ConversarClientes", 
         new Mission("Converse com os clientes", "Vá conversar com os clientes", 
         new ConversaComClientes(2))} ,
@@ -18,7 +18,7 @@ public class Missions
         new Mission("Recolha as lâmpadas caidas", "Vá recolher as lâmpadas caidas no chão", 
         new PegarLampadasCaidas(5))}     
     };
-    public static Dictionary<string, Mission> terceiroSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> terceiroSet = new Dictionary<string, Mission>(){
         {"AcharColar", 
         new Mission("Ache o colar na sala da bagunça", "Vá procurar o colar", 
         new AcharColar(1))},
@@ -30,7 +30,7 @@ public class Missions
         new PegarLampadasCaidas(5))}     
     };
 
-    public static Dictionary<string, Mission> quartoSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> quartoSet = new Dictionary<string, Mission>(){
         {"EncontrarBilhetes", 
         new Mission("Encontre os bilhetes perdidos!", "Vá procurar os bilhetes", 
         new BilhetesPerdidos(3))},
@@ -42,7 +42,7 @@ public class Missions
         new ConversarNaruto(1))}     
     };
 
-    public static Dictionary<string, Mission> quintoSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> quintoSet = new Dictionary<string, Mission>(){
         {"ConsertarEnergia", 
         new Mission("Conserte a energia do shopping!", "Vá consertar a energia", 
         new ConsertarEnergia(1))},
@@ -54,7 +54,7 @@ public class Missions
         new EncontreAChefeNoAlmoxerifado(1))}     
     };
 
-    public static Dictionary<string, Mission> sextoSet = new Dictionary<string, Mission>(){
+    public Dictionary<string, Mission> sextoSet = new Dictionary<string, Mission>(){
         {"ConsertarEnergia", 
         new Mission("Conserte a energia do shopping!", "Vá consertar a energia", 
         new ConsertarEnergia(1))},

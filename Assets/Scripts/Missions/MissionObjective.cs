@@ -37,5 +37,6 @@ public class MissionObjective
                 }
             }
         }
+        Gamehud.hud.RefreshTab(Player.Instance.currentMissions);
     }
 }

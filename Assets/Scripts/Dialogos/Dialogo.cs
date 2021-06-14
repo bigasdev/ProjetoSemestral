@@ -7,6 +7,7 @@ public class Dialogo : MonoBehaviour
     [SerializeField] Text npcName, npcDialogo;
     [SerializeField] Button skipButton;
     [SerializeField] GameObject opcaoMenu;
+    [SerializeField] AudioClip typingSound;
     Npc npc;
     DialogoObject dialogoObject;
     public List<string> dialogos = new List<string>();
@@ -38,8 +39,10 @@ public class Dialogo : MonoBehaviour
         }
         foreach(char c in dialogo){
             npcDialogo.text += c;
+            if(!SoundManager.Instance.sfx.isPlaying)SoundManager.Instance.PlaySfx(typingSound);
             yield return new WaitForSeconds(0.0585f);
         }
+        yield return new WaitForSeconds(1f);
         dialogoIndex++;
         dialogoSequence = null;
         if(dialogoIndex == dialogos.Count){

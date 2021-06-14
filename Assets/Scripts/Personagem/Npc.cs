@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Npc : Interactable
 {
     public string nome;
@@ -21,11 +21,13 @@ public class Npc : Interactable
     int destinoRandom;
     Vector2 realDestino => possibleDestinos[destinoRandom];
     public bool talking;
+    public static event Action onTalk = delegate { };
     private void Start() {
         Initialize();
     }
     public override void Action()
     {
+        onTalk();
         var d = Instantiate(dialogo);
         d.GetComponent<Dialogo>().Initialize(nome, fala, this, dialogoObject != null ? dialogoObject : null);
         StopAllCoroutines();
@@ -44,13 +46,13 @@ public class Npc : Interactable
     }
 
     public virtual void SetCharacter(){
-        var sexo = Random.Range(0, 2);
+        var sexo = UnityEngine.Random.Range(0, 2);
         if(sexo == 1) mulher = true;
         else mulher = false;
 
-        var _nome = Random.Range(0, 21);
-        var spritesMasculino = Random.Range(0, modelosMasculinos.Length - 1);
-        var spritesFeminino = Random.Range(0, modelosFemininos.Length - 1);
+        var _nome = UnityEngine.Random.Range(0, 21);
+        var spritesMasculino = UnityEngine.Random.Range(0, modelosMasculinos.Length - 1);
+        var spritesFeminino = UnityEngine.Random.Range(0, modelosFemininos.Length - 1);
 
         if(mulher){
             npcSprite.sprite = modelosFemininos[spritesFeminino];
@@ -61,16 +63,16 @@ public class Npc : Interactable
             nome = NomesFactory.nomesMasculinos[_nome];
         }
 
-        var _estilo = Random.Range(0, 2);
+        var _estilo = UnityEngine.Random.Range(0, 2);
         if(_estilo == 1) estilo = estiloDoPersonagem.CURIOSO;
         else estilo = estiloDoPersonagem.APRESSADO;
 
         if(estilo == estiloDoPersonagem.CURIOSO){
-            var _fala = Random.Range(0, DialogosFactory.dialogosAmigaveis.Count);
+            var _fala = UnityEngine.Random.Range(0, DialogosFactory.dialogosAmigaveis.Count);
             fala = DialogosFactory.dialogosAmigaveis[_fala];
         }
         else{
-            var _fala = Random.Range(0, DialogosFactory.dialogosPressa.Count);
+            var _fala = UnityEngine.Random.Range(0, DialogosFactory.dialogosPressa.Count);
             fala = DialogosFactory.dialogosPressa[_fala];    
         }
     }
@@ -84,7 +86,7 @@ public class Npc : Interactable
                 }
             }
         }
-        destinoRandom = Random.Range(0, possibleDestinos.Count - 1);
+        destinoRandom = UnityEngine.Random.Range(0, possibleDestinos.Count - 1);
     }
     IEnumerator Walk(){
         while(Vector2.Distance(transform.position, realDestino) > .15f){
