@@ -39,8 +39,8 @@ public class Engine : MonoBehaviour
         missionsContainer.Add("quartoSet", holder.quartoSet);
         missionsContainer.Add("quintoSet", holder.quintoSet);
         missionsContainer.Add("sextoSet", holder.sextoSet);
-        //StartCoroutine(waitForDialogue());
-        StartCoroutine(waitForCutscene());
+        StartCoroutine(waitForDialogue());
+        //StartCoroutine(waitForCutscene());
     }
     IEnumerator waitForDialogue(){
         yield return new WaitForSeconds(1f);
