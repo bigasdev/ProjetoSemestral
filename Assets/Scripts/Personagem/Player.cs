@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         spriteScale = GetComponentInChildren<Transform>();
-        SetClothes();
+        //SetClothes();
     }
     public void StopEverything(){
         horizontal = vertical = 0;
@@ -72,9 +72,9 @@ public class Player : MonoBehaviour
             if(interaction != null) interaction.Desinteract();
         }
     }
-    void SetClothes(){
+    /*void SetClothes(){
         cabelos[Conta.Instance.cabelo].SetActive(true);
         roupas[Conta.Instance.roupa].SetActive(true);
         sapatos[Conta.Instance.sapato].SetActive(true);
-    }
+    }*/
 }

@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start() {
         SoundManager.Instance.PlayAmbient(ambientSound);
+        Screen.SetResolution(1600, 800, true);
     }
 
     public void IniciarJogo(){

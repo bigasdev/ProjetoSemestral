@@ -71,9 +71,45 @@ public partial class Cutscene : MonoBehaviour
             }
         }
     }
+    protected class PlaySound : CutsceneCommand{
+        AudioClip clipSound;
+
+        public PlaySound(AudioClip _clip, bool wait = true){
+            clipSound = _clip;
+            waitUntilComplete = wait;
+        }
+        public override IEnumerator PlayCommand()
+        {
+            SoundManager.Instance.PlaySfx(clipSound);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    protected class Light : CutsceneCommand{
+        bool lightOff;
+        public Light(bool _lightOff, bool wait = true){
+            waitUntilComplete = wait;
+            lightOff = _lightOff;
+        }
+        public override IEnumerator PlayCommand()
+        {
+            if(lightOff){
+                Engine.Instance.SetNight();
+            }
+            else{
+                Engine.Instance.SetDay();
+            }
+            yield return new WaitForSeconds(1f);
+        }
+    }
     protected class Act {
         public static Wait Wait(float duration, bool waitUntilComplete = true){
             return new Wait(duration, waitUntilComplete);
+        }
+        public static PlaySound PlaySound(AudioClip _clip, bool waitUntilComplete = true){
+            return new PlaySound(_clip, waitUntilComplete);
+        }
+        public static Light Light(bool lightOff, bool waitUntilComplete = true){
+            return new Light(lightOff, waitUntilComplete);
         }
         public static Move Move(RectTransform target, RectTransform goal, float speed, bool waitUntilComplete = true){
             return new Move(target, goal, speed, waitUntilComplete);

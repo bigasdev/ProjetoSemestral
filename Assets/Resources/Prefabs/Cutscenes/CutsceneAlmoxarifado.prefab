@@ -124,6 +124,7 @@ MonoBehaviour:
   endState: 0
   fade: 1
   fadeImage: {fileID: 2612685514721524550}
+  suspenseSound: {fileID: 8300000, guid: 54e9def2562e90447873e5d5ecb23e5a, type: 3}
   npc: {fileID: 6870218709314969240}
   npcGoal: {fileID: 8846520573757663177}
 --- !u!1 &2612685516020944361

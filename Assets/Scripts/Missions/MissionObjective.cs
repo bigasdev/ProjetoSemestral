@@ -30,6 +30,7 @@ public class MissionObjective
             RemoveObjetivo();
             Debug.Log("Task completa!");
             Engine.Instance.notifications.CreateNotification("Task completa : " + nome);
+            Gamehud.hud.ChangeScore(Random.Range(3, 6));
             Gamehud.hud.HideTab();
             for(int i = 0; i < Player.Instance.currentMissions.Count; i++){
                 if(Player.Instance.currentMissions[i].objetivo == this){

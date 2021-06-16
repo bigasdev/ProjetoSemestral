@@ -8,6 +8,10 @@ public class Dialogo : MonoBehaviour
     [SerializeField] Button skipButton;
     [SerializeField] GameObject opcaoMenu;
     [SerializeField] AudioClip typingSound;
+    [SerializeField] GameObject cutscene;
+    [SerializeField] GameObject gameover;
+    [SerializeField] GameObject gameOverChefe;
+    [SerializeField] GameObject bilhete;
     Npc npc;
     DialogoObject dialogoObject;
     public List<string> dialogos = new List<string>();
@@ -22,7 +26,7 @@ public class Dialogo : MonoBehaviour
         if(npc != null)npc.talking = true;
         if(dialogoSequence == null)dialogoSequence = StartCoroutine(dialogoBehaviour(dialogos[0]));
         skipButton.onClick.AddListener(SkipDialogo);
-        Player.Instance.StopEverything();
+        if(Player.Instance != null)Player.Instance.StopEverything();
     }
     void BuildDialogos(){
         if(dialogoObject != null){
@@ -35,7 +39,7 @@ public class Dialogo : MonoBehaviour
         Engine.Instance.currentState = States.DIALOGO;
         npcDialogo.text = "";
         if(dialogoObject != null){
-            if(dialogoObject.talkSound.Length > 0) SoundManager.Instance.PlayOst(dialogoObject.talkSound[dialogoIndex]);
+            if(dialogoObject.talkSound.Length > 0) SoundManager.Instance.PlaySfx(dialogoObject.talkSound[dialogoIndex]);
         }
         foreach(char c in dialogo){
             npcDialogo.text += c;
@@ -62,7 +66,18 @@ public class Dialogo : MonoBehaviour
                         m.objetivo.AddObjetivo();
                     }
                 }
-            }
+                if(dialogoObject.temCutscene){
+                    Instantiate(cutscene);
+                }
+                if(dialogoObject.temFinal){
+                    Instantiate(gameover);
+                }
+                if(dialogoObject.temChefeFinal){
+                    Instantiate(gameOverChefe);
+                }
+                if(dialogoObject.temBilhete){
+                    Instantiate(bilhete);
+                }}
             Destroy(this.gameObject);
         }
         else{
@@ -70,7 +85,7 @@ public class Dialogo : MonoBehaviour
         }
     }
     void SkipDialogo(){
-        SoundManager.Instance.StopOst();
+        SoundManager.Instance.StopSfx();
         dialogoIndex++;
         if(dialogoIndex == dialogos.Count){
             Engine.Instance.currentState = States.GAME_UPDATE;

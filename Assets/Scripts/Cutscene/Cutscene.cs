@@ -8,6 +8,7 @@ public partial class Cutscene : MonoBehaviour
     [SerializeField] States endState;
     [SerializeField] bool fade;
     [SerializeField] Image fadeImage;
+    [SerializeField] AudioClip suspenseSound;
     Coroutine sequenceRoutine;
     protected List<CutsceneCommand> sequence;
     public void PlaySequence(){
@@ -24,6 +25,7 @@ public partial class Cutscene : MonoBehaviour
             fadeImage.DOFade(0f, 1f);
             yield return new WaitForSeconds(1f);
         }
+        SoundManager.Instance.PlaySfx(suspenseSound);
         for(int i = 0; i < sequence.Count; i++){
             Debug.Log("PLAYING COMMAND " + i);
             if(sequence[i].waitUntilComplete){

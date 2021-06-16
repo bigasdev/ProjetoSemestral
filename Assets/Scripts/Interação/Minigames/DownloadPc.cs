@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class DownloadPc : MinigameObject
 {
+    public static event Action onComplete = delegate{};
     [SerializeField] AudioClip downloadSom;
     [SerializeField] Button download;
     [SerializeField] bool completo;
@@ -20,6 +22,7 @@ public class DownloadPc : MinigameObject
     IEnumerator Download(){
         animator.SetTrigger("Download");
         yield return new WaitForSeconds(9.5f);
+        onComplete();
         completo = true;
         Close();
         Complete();

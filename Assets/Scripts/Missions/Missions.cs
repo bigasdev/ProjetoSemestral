@@ -5,11 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Missions
 {
-    public Dictionary<string, Mission> primeiroSet = new Dictionary<string, Mission>(){
-        {"Encontrarchefe", 
-        new Mission("Encontre a chefe", "Vá encontrar a chefe na praça de alimentação", 
-        new EncontrarChefe(1))}
-    };
+    public Dictionary<string, Mission> primeiroSet;
     public Dictionary<string, Mission> segundoSet = new Dictionary<string, Mission>(){
         {"ConversarClientes", 
         new Mission("Converse com os clientes", "Vá conversar com os clientes", 
@@ -55,9 +51,6 @@ public class Missions
     };
 
     public Dictionary<string, Mission> sextoSet = new Dictionary<string, Mission>(){
-        {"ConsertarEnergia", 
-        new Mission("Conserte a energia do shopping!", "Vá consertar a energia", 
-        new ConsertarEnergia(1))},
         {"ConversarClientes", 
         new Mission("Converse com os clientes", "Vá conversar com os clientes", 
         new ConversaComClientes(2))} ,
@@ -68,4 +61,11 @@ public class Missions
         new Mission("Vá jantar na praça de alimentação", "Vá jantar", 
         new Jantar(1))}     
     };
+    public Missions(){
+        primeiroSet = new Dictionary<string, Mission>(){
+            {"Encontrarchefe", 
+            new Mission("Encontre a chefe", "Vá encontrar a chefe na praça de alimentação", 
+            new EncontrarChefe(1))}
+            };
+    }
 }

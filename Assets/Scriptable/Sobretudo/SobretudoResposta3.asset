@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0ad4bbb056e3944b2070f503dcc5c0, type: 3}
+  m_Name: SobretudoResposta3
+  m_EditorClassIdentifier: 
+  nome: 
+  talkSound: []
+  falas:
+  - "Estamos presos aqui por uma maldi\xE7\xE3o, o povo n\xE3o aceitou a nossa ajuda
+    e por  isso nos perdemos aqui, n\xE3o podendo ajudar a n\xF3s mesmos."
+  - "N\xE3o cumprimos  nosso prop\xF3sito e por isso estamos presos. Os nossos n\xE3o
+    querem mal algum  aos humanos"
+  - "pelo contr\xE1rio, alguns humanos nos enxergam como amea\xE7a, mas n\xE3o h\xE1
+    o que temer. S\xF3 queremos nos libertar."
+  - Existe um jeito de nos salvar... Sacrifique uma pessoa e nos traga o seu corpo.
+  opcao: 1
+  opcoes:
+  - "Eu n\xE3o sou assassina... n\xE3o quero matar ningu\xE9m..."
+  - O que tenho que fazer?
+  proximos:
+  - {fileID: 11400000, guid: 359c308555b7af94797798cb41155231, type: 2}
+  - {fileID: 11400000, guid: 089cdcb391cc11a429061fade1a7d46b, type: 2}
+  missaoPraPegar: 

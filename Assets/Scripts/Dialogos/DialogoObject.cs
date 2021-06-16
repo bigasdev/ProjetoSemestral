@@ -11,4 +11,8 @@ public class DialogoObject : ScriptableObject {
     public string[] opcoes;
     public DialogoObject[] proximos;
     public string missaoPraPegar;
+    public bool temCutscene;
+    public bool temFinal;
+    public bool temChefeFinal;
+    public bool temBilhete;
 }

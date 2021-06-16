@@ -615,6 +615,8 @@ MonoBehaviour:
   - {fileID: 828209907982458133}
   - {fileID: 3894693550569778642}
   - {fileID: 6596576722475124654}
+  gold: {fileID: 2808143680638234677}
+  score: 0
 --- !u!1 &5910001986142199091
 GameObject:
   m_ObjectHideFlags: 0

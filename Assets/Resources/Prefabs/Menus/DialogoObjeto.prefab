@@ -118,6 +118,10 @@ MonoBehaviour:
   skipButton: {fileID: 1957234396903361659}
   opcaoMenu: {fileID: 9216317077968161701, guid: a685800eae209234985f9b421b39db02, type: 3}
   typingSound: {fileID: 8300000, guid: eb28b0d5bedf5b14cb4d99c1f507b368, type: 3}
+  cutscene: {fileID: 729491200391505916, guid: 9ab5ebbf2b4f9d74fb1b47e93c5e31e2, type: 3}
+  gameover: {fileID: 8415801374311846408, guid: 2778a1d75eb564647b371e8733ef5f54, type: 3}
+  gameOverChefe: {fileID: 5780799028881392307, guid: cfec22a7b4a4c7d4e97d3c2647301134, type: 3}
+  bilhete: {fileID: 5043095106054977885, guid: b08b0b8fe0aef874689545439a6660a6, type: 3}
   dialogos: []
 --- !u!1001 &7292972982750314970
 PrefabInstance:

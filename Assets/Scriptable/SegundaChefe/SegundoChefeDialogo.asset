@@ -16,7 +16,8 @@ MonoBehaviour:
   talkSound: []
   falas:
   - "Ah, oi, \xE9 voc\xEA. Pedi que viesse para avisar que preciso de alguns documentos
-    na sala de computador, pode fazer o download e enviar para meu e-mail?"
+    na sala de computador"
+  - pode fazer o download e enviar para meu e-mail?
   opcao: 1
   opcoes:
   - 'Claro, mas antes posso te perguntar uma coisa? '

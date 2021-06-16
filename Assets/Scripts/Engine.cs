@@ -23,6 +23,7 @@ public class Engine : MonoBehaviour
     public States currentState;
     [SerializeField] AudioClip nightOst;
     [SerializeField] GameObject dialogo;
+    [SerializeField] GameObject cutsceneFinal;
     [SerializeField] DialogoObject _dialogo;
     
     float tiltTimer;
@@ -31,8 +32,6 @@ public class Engine : MonoBehaviour
     Missions holder;
     private void Start() {
         GetLights();
-        var d = Instantiate(dialogo);
-        d.GetComponent<Dialogo>().Initialize("Chefe", "", null, _dialogo);
         holder = new Missions();
         missionsContainer.Add("primeiroSet", holder.primeiroSet);
         missionsContainer.Add("segundoSet", holder.segundoSet);
@@ -40,6 +39,17 @@ public class Engine : MonoBehaviour
         missionsContainer.Add("quartoSet", holder.quartoSet);
         missionsContainer.Add("quintoSet", holder.quintoSet);
         missionsContainer.Add("sextoSet", holder.sextoSet);
+        //StartCoroutine(waitForDialogue());
+        StartCoroutine(waitForCutscene());
+    }
+    IEnumerator waitForDialogue(){
+        yield return new WaitForSeconds(1f);
+        var d = Instantiate(dialogo);
+        d.GetComponent<Dialogo>().Initialize("Chefe", "", null, _dialogo);
+    }
+    IEnumerator waitForCutscene(){
+        yield return new WaitForSeconds(5f);
+        Instantiate(cutsceneFinal);
     }
 
     void GetLights(){
@@ -52,7 +62,7 @@ public class Engine : MonoBehaviour
         }
     }
 
-    void SetNight(){
+    public void SetNight(){
         globalLight.intensity = .25f;
         night = true;
         if(postProcessing.profile.TryGet<ChromaticAberration>(out var c)){

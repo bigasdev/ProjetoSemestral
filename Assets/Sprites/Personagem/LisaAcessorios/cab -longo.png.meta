@@ -5,6 +5,57 @@ TextureImporter:
   - first:
       213: -5608280020648154009
     second: cab -longo_0
+  - first:
+      213: -1839292299076176095
+    second: cab -longo_1
+  - first:
+      213: -6431252232142496626
+    second: cab -longo_2
+  - first:
+      213: -2489706109545137472
+    second: cab -longo_3
+  - first:
+      213: -8491006645759657086
+    second: cab -longo_4
+  - first:
+      213: -1734325607422271918
+    second: cab -longo_5
+  - first:
+      213: 832608743353237443
+    second: cab -longo_6
+  - first:
+      213: 5122651246195900484
+    second: cab -longo_7
+  - first:
+      213: -8252829527748530217
+    second: cab -longo_8
+  - first:
+      213: -5669220975364267352
+    second: cab -longo_9
+  - first:
+      213: -1779330868821487466
+    second: cab -longo_10
+  - first:
+      213: 243809699525504725
+    second: cab -longo_11
+  - first:
+      213: -1557707311668272652
+    second: cab -longo_12
+  - first:
+      213: 2772220356167476728
+    second: cab -longo_13
+  - first:
+      213: -7815029994178858640
+    second: cab -longo_14
+  - first:
+      213: 5756128920155968571
+    second: cab -longo_15
+  - first:
+      213: -8583741533676590246
+    second: cab -longo_16
+  - first:
+      213: -9209177550066671502
+    second: cab -longo_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,7 +165,7 @@ TextureImporter:
         width: 23
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,6 +173,363 @@ TextureImporter:
       bones: []
       spriteID: 76ca85009036b22b0800000000000000
       internalID: -5608280020648154009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 3
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127f37326658976e0800000000000000
+      internalID: -1839292299076176095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c553a4b2a9fb6a0800000000000000
+      internalID: -6431252232142496626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_3
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 5
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca31710c79c27dd0800000000000000
+      internalID: -2489706109545137472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 3
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bb3066172e92a80800000000000000
+      internalID: -8491006645759657086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 4
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e5bb48c007ee7e0800000000000000
+      internalID: -1734325607422271918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_6
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 6
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf3470ad350e8b00800000000000000
+      internalID: 832608743353237443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_7
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 4
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44008bdda20571740800000000000000
+      internalID: 5122651246195900484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_8
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 4
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfa1b6154f087d80800000000000000
+      internalID: -8252829527748530217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 5
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2283a4f81e251b0800000000000000
+      internalID: -5669220975364267352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 4
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690120a800c8e47e0800000000000000
+      internalID: -1779330868821487466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_11
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 4
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de230541af226300800000000000000
+      internalID: 243809699525504725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_12
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 5
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1ebfff379e16ae0800000000000000
+      internalID: -1557707311668272652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 3
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f52870e9b7e87620800000000000000
+      internalID: 2772220356167476728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_14
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 3
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07132f740af6b8390800000000000000
+      internalID: -7815029994178858640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 4
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34df3f61c0e1ef40800000000000000
+      internalID: 5756128920155968571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_16
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 4
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ba071cd8c60e880800000000000000
+      internalID: -8583741533676590246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cab -longo_17
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 4
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27026ce7fcd623080800000000000000
+      internalID: -9209177550066671502
       vertices: []
       indices: 
       edges: []

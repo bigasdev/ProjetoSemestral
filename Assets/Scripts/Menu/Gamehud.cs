@@ -7,11 +7,17 @@ public class Gamehud : MonoBehaviour
     public static Gamehud hud;
     [SerializeField] Button tab;
     [SerializeField] Text[] tasks;
+    [SerializeField] Text gold;
+    public int score = 0;
     List<Mission> missoes = new List<Mission>();
     bool isShowing = false;
     private void Start() {
         tab.onClick.AddListener(() => InitializeTab(Player.Instance.currentMissions));
         hud = this;
+    }
+    public void ChangeScore(int quantity){
+        score += quantity;
+        gold.text = score.ToString();
     }
     private void Update() {
         tab.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(tab.GetComponent<RectTransform>().anchoredPosition, 
